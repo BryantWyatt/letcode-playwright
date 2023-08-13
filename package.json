@@ -1,0 +1,17 @@
+{
+  "name": "letcode-playwright",
+  "version": "1.0.0",
+  "description": "LetCode test automation site using playwright",
+  "main": "index.js",
+  "scripts": {
+    "headless": "playwright test",
+    "uimode": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "Bryant Wyatt",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.0"
+  }
+}
