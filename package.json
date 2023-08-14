@@ -6,7 +6,8 @@
   "scripts": {
     "headless": "playwright test",
     "uimode": "playwright test --ui",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "format": "prettier . --write"
   },
   "keywords": [],
   "author": "Bryant Wyatt",

@@ -29,7 +29,7 @@ test.describe("Input", () => {
     await input.type(". How are you?");
 
     // Assert
-    expect(input).toHaveValue("I am good. How are you?");
+    await expect(input).toHaveValue("I am good. How are you?");
   });
 
   test("should accept tab key", async ({ page }) => {
@@ -41,7 +41,7 @@ test.describe("Input", () => {
     await page.keyboard.press("Tab");
 
     // Assert
-    expect(page.locator("#getMe")).toBeFocused();
+    await expect(page.locator("#getMe")).toBeFocused();
   });
 
   test("should have correct content", async ({ page }) => {
@@ -49,7 +49,7 @@ test.describe("Input", () => {
     const input = await page.locator("#getMe");
 
     // Assert
-    expect(input).toHaveValue("ortonikc");
+    await expect(input).toHaveValue("ortonikc");
   });
 
   test("should be clearable", async ({ page }) => {
@@ -60,7 +60,7 @@ test.describe("Input", () => {
     await input.clear();
 
     // Assert
-    expect(input).toHaveValue("");
+    await expect(input).toHaveValue("");
   });
 
   test("should be disabled", async ({ page }) => {
